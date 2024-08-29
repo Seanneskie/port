@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b1b;
+    color: #ffffff;
+    overflow: hidden; /* Prevent scrollbars on body */
+}
+
+.sidebar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.sidebar::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent overflow in the container */
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto; /*Scroll only the sidebar if content overflows*/ 
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensure the image covers the circle area */
+    overflow: hidden; /* Clip any part of the image outside the circle */
+}
+
+.profile h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.profile p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ffd700;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.info ul li {
+    font-size: 0.9em;
+}
+
+.language-skills, .tech-skills, .extra-skills {
+    margin: 30px 0;
+}
+
+.circle-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress {
+    background-color: #3b3b3b;
+    height: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #ffd700;
+    height: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #1b1b1b;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-content {
+    width: 100%;
+    padding: 40px;
+    overflow-y: auto;  /*Scroll only the main content if content overflows */
+    background: #1c1c1e;
+    box-sizing: border-box;  /*Include padding in the element's total width and height */
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.stats .stat {
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 2em;
+    color: #ffd700;
+    margin: 0;
+}
+
+.stats p {
+    font-size: 0.9em;
+}
+
+.services, .experiences, .education, .hobbies, .connect {
+    margin-top: 50px;
+}
+
+.experiences h2, .education h2, .hobbies h2, .connect h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.experiences-grid, .education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 20px; /* Adds space between the grid items */
+    margin-top: 50px;
+}
+
+.experience, .education-item {
+    background-color: #2c2c2c;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.experience h3, .education-item h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.experience p, .education-item p {
+    margin: 5px 0;
+}
+
+.hobbies p {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Set a smaller height for the banner */
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left;
+}
+
+.overlay-text h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.overlay-text p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+    color: #ffd700; /* Optional: adjust text color */
+}
+
+.overlay-text .btn {
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #ffd700;
+}
+
+.grid-item p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.section-label h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-align: center; /* Optional: to center the text */
+}
+
+.connect {
+    text-align: center; /* Center the entire connect section */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-direction: row; /* Ensures icons are in a row */
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0; /* Light gray background color */
+    border-radius: 50%;
+    color: #3b3b3b; /* Dark gray icon color */
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #ffd700; /* Gold background on hover */
+    color: #ffffff; /* White icon color on hover */
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns per row */
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.certificate-item {
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; /* Sits above everything else */
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
