@@ -17,7 +17,7 @@ body {
 .container {
     display: flex;
     height: 100vh;
-    overflow: hidden; /* Prevent overflow in the container */
+    overflow: auto; /* Prevent overflow in the container */
 }
 
 .sidebar {
@@ -27,7 +27,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: auto; /*Scroll only the sidebar if content overflows*/ 
 }
 
 .profile img {
@@ -114,7 +113,6 @@ body {
 .main-content {
     width: 100%;
     padding: 40px;
-    overflow-y: auto;  /*Scroll only the main content if content overflows */
     background: #1c1c1e;
     box-sizing: border-box;  /*Include padding in the element's total width and height */
 }
