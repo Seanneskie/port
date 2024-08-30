@@ -89,7 +89,7 @@
                     <div class="overlay-text">
                         <h1>Hi!<br>Im Khembhemhey</h1>
                         <p><code>BSIT - Major in Database</code></p>
-                        <a href="kimbeme14xd@gmail.com" class="btn">Hire Me</a>
+                        <a href="#" onclick="openGmail()" class="btn">Hire Me</a>
                     </div>
                 </div>
             </div>
@@ -311,5 +311,37 @@
         </div>
 
     </div>
+    <script>
+        function openGmail() {
+            const email = "kimbeme14xd@gmail.com";
+            const subject = "Job Offer: [Job Title] at [Company Name]";
+            const body = `Dear Kim,
+
+    We are thrilled to extend an offer to you for the position of [Job Title] at [Company Name]. After careful consideration, we are confident that your skills and experiences align perfectly with the needs of our team.
+
+    Here are the details of your offer:
+
+    Position: [Job Title]
+    Start Date: [Start Date]
+    Salary: [Salary Details]
+    Other Benefits: [Benefits]
+    To accept this offer, please reply to this email with your confirmation. We are excited about the possibility of you joining our team and contributing to our ongoing projects.
+
+    If you have any questions or need further information, feel free to reach out.
+
+    Best regards,
+
+    [Company Name]
+    [Contact Information]`;
+
+            const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            const confirmSend = confirm(`Are you sure you want to send this job offer email to ${email}?`);
+            
+            if (confirmSend) {
+                window.open(mailtoLink, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
